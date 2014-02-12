@@ -1,26 +1,17 @@
 Ext.define('MusicApp.view.Main', {
-    extend: 'Ext.container.Container',
-    requires:[
-        'Ext.tab.Panel',
-        'Ext.layout.container.Border'
-    ],
-    
+    extend: 'Ext.container.Container', 
     xtype: 'app-main',
-
     layout: {
-        type: 'border'
+        type: 'hbox'
     },
-
-    items: [{
-        region: 'west',
-        xtype: 'panel',
-        title: 'west',
-        width: 150
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Center Tab 1'
-        }]
-    }]
+    items: [
+        {
+            xtype: 'nav',
+            width: 150
+        },
+        {
+            xtype: 'staff',
+            flex: 1
+        }
+    ]
 });
